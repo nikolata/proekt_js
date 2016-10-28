@@ -1,0 +1,55 @@
+<html>
+<head>
+</head>
+<body></body>
+<script type="text/javascript">
+function caeserCipher(string){
+	
+
+for (var i = 0; i < string.length; i++) {
+  // console.log(string.charCodeAt(i));
+  var c = string.charCodeAt(i);
+ if(c >=65 && c<= 90 )
+ 	{
+ 		if (c>69) {
+ 		//69 = E
+ 			var otmestvane = 69-c;
+ 			document.write(c-otmestvane + " ");
+ 			var izvejda = c - otmestvane;
+ 			var izvejda1 = 172 - izvejda;
+ 			
+ 			document.write(izvejda1 + " ");
+ 			document.write("</br>");
+ 			if(izvejda>90)
+ 				console.log(String.fromCharCode(izvejda1));
+ 			else
+ 			  console.log(String.fromCharCode(c-otmestvane));
+
+ 		};
+ 		if (c<69) {
+ 			var otmestvane1 = 69-c;
+ 			var izvejdane1 = c - otmestvane1;
+ 			var izvejdane2 = 27 + izvejdane1;
+ 			// console.log(izvejdane);
+ 			// console.log(izvejdane2);
+ 			if (izvejdane1<65)
+ 				console.log(String.fromCharCode(izvejdane2))
+ 			else
+ 			console.log(String.fromCharCode(izvejdane1));
+ 		};
+ 		if (c== 69) {
+ 			console.log(String.fromCharCode(69));
+ 		};
+
+
+}
+ // if(c >=97 && c<= 122 )
+ // 	console.log("small");
+}
+}
+var string = "I LOVE KIDS A B C E";
+caeserCipher(string);
+// test1();
+</script>
+</html>
+<!-- String.fromCharCode(65) -->
